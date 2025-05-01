@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix Clone</title>
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="assets/logo.svg" alt="Netflix Logo">
+    </div>
+    <nav class="nav">
+      <a href="#">Home</a>
+      <a href="#">TV Shows</a>
+      <a href="#">Movies</a>
+      <a href="#">My List</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Unlimited movies, TV shows and more</h1>
+      <p>Watch anywhere. Cancel anytime.</p>
+    </div>
+  </section>
+  
+  <section class="search-section">
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search for movies or shows..." onkeyup="searchMovies()">
+    </div>
+  </section>
+  
+
+  <!-- Movie Section 1 -->
+  <section class="movie-section">
+    <h2>Popular on Netflix</h2>
+    <div class="movie-row-container">
+      <button class="scroll-button left" onclick="scrollLeft('movieRow')">&lt;</button>
+      <div class="movie-row" id="movieRow">
+        <div class="thumbnail" onclick="openModal('assets/thumbnails/movie1.jpg', 'Movie 1', 'A suspenseful thriller.')">
+          <img src="assets/thumbnails/movie1.jpg" alt="Pushpa 2">
+            <div class="overlay"><span>▶</span></div>
+        </div>
+        <div class="thumbnail" onclick="openModal('assets/thumbnails/movie1.jpg', 'Movie 2', 'A suspenseful thriller.')">
+          <img src="assets/thumbnails/movie2.jpg" alt="Deva">
+            <div class="overlay"><span>▶</span></div>
+        </div>         
+        <div class="thumbnail" onclick="openModal('assets/thumbnails/movie1.jpg', 'Movie 3', 'A suspenseful thriller.')">  
+          <img src="assets/thumbnails/movie3.jpg" alt="Jewel Theif">
+            <div class="overlay"><span>▶</span></div>
+        </div>
+        <div class="thumbnail" onclick="openModal('assets/thumbnails/movie1.jpg', 'Movie 4', 'A suspenseful thriller.')">
+          <img src="assets/thumbnails/movie4.jpg" alt="Chaava">
+            <div class="overlay"><span>▶</span></div>
+        </div>
+        <div class="thumbnail" onclick="openModal('assets/thumbnails/movie1.jpg', 'Movie 5', 'A suspenseful thriller.')">  
+          <img src="assets/thumbnails/movie5.jpg" alt="Havoc">
+            <div class="overlay"><span>▶</span></div>
+                </div>    
+        <div class="thumbnail" onclick="openModal('assets/thumbnails/movie1.jpg', 'Movie 6', 'A suspenseful thriller.')">
+            <img src="assets/thumbnails/movie6.jpg" alt="Mad 2">
+                <div class="overlay"><span>▶</span></div>
+                    </div>
+        <div class="thumbnail" onclick="openModal('assets/thumbnails/movie1.jpg', 'Movie 7', 'A suspenseful thriller.')">
+            <img src="assets/thumbnails/movie7.jpg" alt="Court">
+                <div class="overlay"><span>▶</span></div>
+                    </div>
+        <div class="thumbnail" onclick="openModal('assets/thumbnails/movie1.jpg', 'Movie 8', 'A suspenseful thriller.')">
+            <img src="assets/thumbnails/movie8.jpg" alt="Dragon">
+                <div class="overlay"><span>▶</span></div>
+                    </div>
+        <div class="thumbnail" onclick="openModal('assets/thumbnails/movie1.jpg', 'Movie 9', 'A suspenseful thriller.')">
+            <img src="assets/thumbnails/movie9.jpg" alt="When life gives you Tangerines">
+                <div class="overlay"><span>▶</span></div>
+                    </div>
+        <div class="thumbnail" onclick="openModal('assets/thumbnails/movie1.jpg', 'Movie 10', 'A suspenseful thriller.')">
+            <img src="assets/thumbnails/movie10.jpg" alt="Wrestlemania">
+                <div class="overlay"><span>▶</span></div>
+                    </div>
+      </div>
+      <button class="scroll-button right" onclick="scrollRight('movieRow')">&gt;</button>
+    </div>
+  </section>
+
+  <!-- Movie Section 2 -->
+  <section class="movie-section">
+    <h2>Trending Now</h2>
+    <div class="movie-row-container">
+      <button class="scroll-button left" onclick="scrollLeft('trendingRow')">&lt;</button>
+      <div class="movie-row" id="trendingRow">
+        <div class="thumbnail" onclick="openModal('assets/thumbnails/movie6.jpg', 'Trending Movie', 'Highly watched movie.')">
+          <img src="assets/thumbnails/movie11.jpg" alt="Bhool bhulaiyaa">
+          <div class="overlay"><span>▶</span></div>
+        </div> 
+        <div class="thumbnail" onclick="openModal('assets/thumbnails/movie6.jpg', 'Trending Movie', 'Highly watched movie.')">
+          <img src="assets/thumbnails/movie12.jpg" alt="Dunky">
+          <div class="overlay"><span>▶</span></div>
+        </div>   
+        <div class="thumbnail" onclick="openModal('assets/thumbnails/movie6.jpg', 'Trending Movie', 'Highly watched movie.')">
+          <img src="assets/thumbnails/movie13.jpg" alt="Venom">
+          <div class="overlay"><span>▶</span></div>
+        </div>
+        <div class="thumbnail" onclick="openModal('assets/thumbnails/movie6.jpg', 'Trending Movie', 'Highly watched movie.')">
+          <img src="assets/thumbnails/movie14.jpg" alt="Ctrl">
+          <div class="overlay"><span>▶</span></div>
+        </div>  
+        <div class="thumbnail" onclick="openModal('assets/thumbnails/movie6.jpg', 'Trending Movie', 'Highly watched movie.')">
+          <img src="assets/thumbnails/movie15.jpg" alt="Black mirror">
+          <div class="overlay"><span>▶</span></div>
+        </div>
+        <div class="thumbnail" onclick="openModal('assets/thumbnails/movie6.jpg', 'Trending Movie', 'Highly watched movie.')">
+          <img src="assets/thumbnails/movie16.jpg" alt="Money heist">
+          <div class="overlay"><span>▶</span></div>
+        </div>  
+        <div class="thumbnail" onclick="openModal('assets/thumbnails/movie6.jpg', 'Trending Movie', 'Highly watched movie.')">
+          <img src="assets/thumbnails/movie17.jpg" alt="Stranger things">
+          <div class="overlay"><span>▶</span></div>
+        </div>  
+        <div class="thumbnail" onclick="openModal('assets/thumbnails/movie6.jpg', 'Trending Movie', 'Highly watched movie.')">
+          <img src="assets/thumbnails/movie18.jpg" alt="Azaad">
+          <div class="overlay"><span>▶</span></div>
+        </div>  
+        <div class="thumbnail" onclick="openModal('assets/thumbnails/movie6.jpg', 'Trending Movie', 'Highly watched movie.')">
+          <img src="assets/thumbnails/movie19.jpg" alt="Sukhee">
+          <div class="overlay"><span>▶</span></div>
+        </div>  
+        <div class="thumbnail" onclick="openModal('assets/thumbnails/movie6.jpg', 'Trending Movie', 'Highly watched movie.')">
+          <img src="assets/thumbnails/movie20.jpg" alt="Alice">
+          <div class="overlay"><span>▶</span></div>
+        </div>  
+        <div class="thumbnail" onclick="openModal('assets/thumbnails/movie6.jpg', 'Trending Movie', 'Highly watched movie.')">
+          <img src="assets/thumbnails/movie21.jpg" alt="Khakee">
+          <div class="overlay"><span>▶</span></div>
+        </div>  
+        <div class="thumbnail" onclick="openModal('assets/thumbnails/movie6.jpg', 'Trending Movie', 'Highly watched movie.')">
+          <img src="assets/thumbnails/movie22.jpg" alt="The Life list">
+          <div class="overlay"><span>▶</span></div>
+        </div> 
+      </div>
+      <button class="scroll-button right" onclick="scrollRight('trendingRow')">&gt;</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>Questions? Call 000-800-919-1694</p>
+      <ul class="footer-links">
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Privacy</a></li>
+      </ul>
+      <p class="copyright">© 2025 Netflix Clone</p>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div id="movieModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeModal()">×</span>
+      <img src="assets/thumbnails/movie1.jpg" alt="Preview" class="modal-img">
+      <h3 class="modal-title">Movie Title</h3>
+      <p class="modal-description">This is a brief description of the movie.</p>
+      <button class="modal-play">▶ Play</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
